@@ -23,10 +23,14 @@ This project aims to automate the generation of personal cover letters in PDF by
 - [`personal_utils.docx_manipulate`](https://github.com/leopengningchuan/personal_utils): for modifying Word files
 
 ### 2. Build Cover Letter Information Dictionary
-
+By inputting the company name and job title, the program generates a structured Python dictionary containing all necessary placeholder values, including the current date in long format (e.g., `COMPANY`, `POSITION`, `LONG_DATE`). This ensures that the data is clean, well-formatted, and ready for accurate and consistent substitution during document generation.
 
 ### 3. Word Cover Letter with Placeholder Replacement
+The cover letter automation process uses `populate_docx_paragraph()` from the `utils.docx_manipulate` module to dynamically replace placeholders in a Word docx template using values from an cover letter dictionary.
 
+For each cover letter entry, the script replaces matching placeholders within the Word template using the provided information. The generated document preserves the original formatting and layout, while the template itself remains unchanged to ensure consistency across all cover letters.
+
+The `utils/` folder is included as a Git submodule and contains a reusable function library maintained in the [`personal_utils`](https://github.com/leopengningchuan/personal_utils). You can refer to that repository for detailed function documentation and personal notes.
 
 ### 4. Convert Word File to PDF File
 After the cover letter is generated as a Word file, it is immediately converted into a PDF file for final output. Both the Word file and the PDF file will be kept for future use.
