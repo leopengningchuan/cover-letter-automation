@@ -15,15 +15,17 @@ This project aims to automate the generation of personal cover letters in PDF by
 - [utils](https://github.com/leopengningchuan/personal_utils) (submodel)
 - coverletter_automation.ipynb
 - cover_letter_prototype.docx
+- skill_set.json
 
 ## Instructions
 
 ### 1. Package Used
 - `datetime`: for data manipulation
+- `json`: for json file processing
 - [`personal_utils.docx_manipulate`](https://github.com/leopengningchuan/personal_utils): for modifying Word files
 
 ### 2. Build Cover Letter Information Dictionary
-By inputting the company name and job title, the program generates a structured Python dictionary containing all necessary placeholder values, including the current date in long format (e.g., `COMPANY`, `POSITION`, `LONG_DATE`). This ensures that the data is clean, well-formatted, and ready for accurate and consistent substitution during document generation.
+By inputting the company name and job title, the program generates a structured Python dictionary containing all necessary placeholder values, including the current date in long format (e.g., `COMPANY`, `POSITION`, `LONG_DATE`). It also reads a `skill_set.json` file containing predefined skills and detailed descriptions. From this dataset, three relevant skills are selected—either manually or programmatically—and added to the dictionary using keys such as `SKILL_1`, `SKILL_DETAILS_1`, etc. This ensures the data is clean, well-formatted, and tailored for each job application, enabling accurate and consistent substitution in the cover letter template.
 
 ### 3. Word Cover Letter with Placeholder Replacement
 The cover letter automation process uses `populate_docx_paragraph()` from the `utils.docx_manipulate` module to dynamically replace placeholders in a Word docx template using values from an cover letter dictionary.
