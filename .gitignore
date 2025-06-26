@@ -1,5 +1,3 @@
 .DS_Store
-.ipynb_checkpoints/README-checkpoint.md
-.ipynb_checkpoints/*.ipynb
-Cover Letter_Ningchuan(Leo) Peng.docx
-Cover Letter_Ningchuan(Leo) Peng.pdf
+.ipynb_checkpoints/
+__pycache__/
