@@ -36,6 +36,8 @@ This project aims to automate the generation of personal cover letters in PDF by
 
 ### 1. Packages Used
 - `datetime`: for data manipulation
+- `os`: core Python libraries for basic system operations
+- `dotenv`: for loading environment variables from a `.env` file
 - `json`: for json file processing
 - [`personal_utils.docx_manipulate`](https://github.com/leopengningchuan/personal_utils): for modifying DOCX files
 
