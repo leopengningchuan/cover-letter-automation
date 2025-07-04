@@ -22,11 +22,15 @@ This project addresses that challenge by automating the cover letter creation pr
 This project aims to automate the generation of personal cover letters in PDF by using **Python Jupyter Notebook** and **Microsoft Word** based on the company name and job title to streamlines the application process and saves time during online job submissions.
 
 ## File Structure
+
+Configuration & Metadata:
 - `README.md` – project overview
 - `LICENSE.txt` – license information
 - `.gitignore` – git ignore config
 - `.gitattributes` – git attributes config
 - `.gitmodules` – git submodules config
+
+Core Logic:
 - [`utils`](https://github.com/leopengningchuan/personal_utils) – submodule used
 - `coverletter_automation.ipynb` – main notebook for cover letter generation
 - `cover_letter_prototype.docx` – DOCX cover letter template
